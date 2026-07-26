@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="آفتاب نیرو — طراحی، تأمین و نصب تخصصی پنل خورشیدی خانگی و صنعتی. برآورد آنلاین هزینه و مشاوره رایگان." />
+  <title>آفتاب نیرو | نصب تخصصی پنل خورشیدی</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>" />
+</head>
+<body>
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__right">
+        <a href="tel:02191000000" class="topbar__item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span id="site-phone">۰۲۱-۹۱۰۰۰۰۰۰</span>
+        </a>
+        <span class="topbar__sep"></span>
+        <a href="mailto:info@aftabniro.ir" class="topbar__item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span id="site-email">info@aftabniro.ir</span>
+        </a>
+      </div>
+      <div class="topbar__left">
+        <span class="topbar__item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span id="site-hours">شنبه تا پنج‌شنبه ۹ تا ۱۸</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">
+        <span class="logo__icon">
+          <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+            <circle cx="20" cy="20" r="18" fill="#C8102E"/>
+            <circle cx="20" cy="16" r="7" fill="#FFF3E0"/>
+            <path d="M12 28c2-4 6-6 8-6s6 2 8 6" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M20 6v2M20 24v2M10 16h2M28 16h2M13 9l1.4 1.4M25.6 21.6L27 23M27 9l-1.4 1.4M13 23l1.4-1.4" stroke="#FFF3E0" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo__text">
+          <strong>آفتاب نیرو</strong>
+          <small>نصب پنل خورشیدی</small>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#about">درباره ما</a>
+        <a href="#services">خدمات</a>
+        <a href="#projects">پروژه‌ها</a>
+        <a href="#calculator">ماشین‌حساب</a>
+        <a href="#process">مراحل کار</a>
+        <a href="#contact">تماس</a>
+      </nav>
+
+      <div class="header__actions">
+        <button type="button" class="btn btn--ghost btn--sm header__calc-btn" data-open-calc-modal aria-label="ماشین‌حساب">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="10" y2="18"/><line x1="14" y1="18" x2="16" y2="18"/></svg>
+          برآورد هزینه
+        </button>
+        <a href="#contact" class="btn btn--primary btn--sm">مشاوره رایگان</a>
+        <button type="button" class="burger" id="burger" aria-label="منو">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__bg" style="background-image:url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1920&q=80')"></div>
+      <div class="hero__overlay"></div>
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <span class="badge">بیش از ۱۲ سال تجربه در انرژی خورشیدی</span>
+          <h1>انرژی پاک، هزینه کمتر<br /><span>با نصب حرفه‌ای پنل خورشیدی</span></h1>
+          <p class="hero__lead">
+            از طراحی و تأمین تجهیزات تا نصب، راه‌اندازی و پشتیبانی — همه را یکجا،
+            با ضمانت‌نامه کتبی و تیم فنی مجرب دریافت کنید.
+          </p>
+          <div class="hero__cta">
+            <a href="#calculator" class="btn btn--primary btn--lg">محاسبه هزینه آنلاین</a>
+            <a href="#projects" class="btn btn--outline-light btn--lg">مشاهده پروژه‌ها</a>
+          </div>
+          <div class="hero__trust">
+            <div class="hero__trust-item">
+              <strong>+۳۵۰</strong>
+              <span>پروژه اجراشده</span>
+            </div>
+            <div class="hero__trust-item">
+              <strong>۱۵ سال</strong>
+              <span>گارانتی پنل</span>
+            </div>
+            <div class="hero__trust-item">
+              <strong>۲۴/۷</strong>
+              <span>پشتیبانی فنی</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mini calculator in hero (header-adjacent placement) -->
+        <aside class="calc-card calc-card--hero reveal reveal-delay">
+          <div class="calc-card__head">
+            <h3>برآورد سریع هزینه</h3>
+            <p>متراژ و ظرفیت را وارد کنید</p>
+          </div>
+          <form class="calc-form" data-calc="hero" novalidate>
+            <div class="field">
+              <label for="hero-area">متراژ زمین / سقف (متر مربع)</label>
+              <div class="field__input">
+                <input type="number" id="hero-area" name="area" min="10" max="5000" step="1" placeholder="مثلاً ۱۲۰" required />
+                <span class="field__unit">m²</span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="hero-kw">میزان پنل درخواستی (کیلووات)</label>
+              <div class="field__input">
+                <input type="number" id="hero-kw" name="kw" min="1" max="100" step="0.5" placeholder="مثلاً ۵" required />
+                <span class="field__unit">kW</span>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block">محاسبه مبلغ</button>
+          </form>
+          <div class="calc-result" data-calc-result="hero" hidden>
+            <div class="calc-result__row">
+              <span>هزینه تجهیزات و نصب</span>
+              <strong data-r="subtotal">—</strong>
+            </div>
+            <div class="calc-result__row">
+              <span>دستمزد نصب</span>
+              <strong data-r="labor">—</strong>
+            </div>
+            <div class="calc-result__total">
+              <span>مبلغ نهایی تقریبی</span>
+              <strong data-r="total">—</strong>
+            </div>
+            <p class="calc-result__note" data-r="notes"></p>
+            <a href="#contact" class="btn btn--dark btn--block btn--sm calc-result__cta">درخواست مشاوره با این مشخصات</a>
+          </div>
+        </aside>
+      </div>
+      <div class="hero__wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#fff"/></svg>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about">
+      <div class="container about__grid">
+        <div class="about__media reveal">
+          <div class="about__img-wrap">
+            <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=900&q=80" alt="نصب پنل خورشیدی روی سقف" loading="lazy" />
+            <div class="about__float">
+              <strong>۱۲+</strong>
+              <span>سال تجربه تخصصی</span>
+            </div>
+          </div>
+          <div class="about__img-secondary">
+            <img src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?auto=format&fit=crop&w=500&q=80" alt="مزرعه خورشیدی" loading="lazy" />
+          </div>
+        </div>
+        <div class="about__content reveal">
+          <span class="section-label">درباره آفتاب نیرو</span>
+          <h2 class="section-title">شریکی مطمئن برای استقلال انرژی شما</h2>
+          <p class="section-text">
+            ما یک تیم مهندسی و اجرایی هستیم که از سال ۱۳۹۱ روی طراحی، تأمین و نصب سیستم‌های فتوولتائیک
+            خانگی، تجاری و صنعتی تمرکز کرده‌ایم. هدف‌مان ساده است: سیستمی پایدار، ایمن و اقتصادی
+            که واقعاً روی قبض برق شما اثر بگذارد.
+          </p>
+          <ul class="check-list">
+            <li>طراحی مهندسی بر اساس مصرف واقعی و شرایط اقلیمی</li>
+            <li>تجهیزات برندهای معتبر با گارانتی رسمی</li>
+            <li>نصب استاندارد و تحویل با گزارش تست و راه‌اندازی</li>
+            <li>پیگیری مجوزها و اتصال به شبکه (در پروژه‌های on-grid)</li>
+          </ul>
+          <div class="about__actions">
+            <a href="#contact" class="btn btn--primary">درخواست بازدید رایگان</a>
+            <a href="#services" class="btn btn--ghost">جزئیات خدمات</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section section--muted" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">خدمات ما</span>
+          <h2 class="section-title">هر آنچه برای یک سیستم خورشیدی کامل نیاز دارید</h2>
+          <p class="section-text">از ایده تا بهره‌برداری — بدون واسطه و با یک تیم پاسخگو</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 48 48" width="40" height="40"><rect x="8" y="10" width="32" height="24" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 18h32M16 10v-4M32 10v-4M18 28h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="38" r="2" fill="currentColor"/></svg>
+            </div>
+            <h3>طراحی و شبیه‌سازی</h3>
+            <p>محاسبه بار، جهت‌گیری پنل، سایه‌اندازی و انتخاب اینورتر مناسب پروژه شما.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 48 48" width="40" height="40"><path d="M10 34V14l14-6 14 6v20l-14 6-14-6z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 14l14 6 14-6M24 20v20" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3>تأمین تجهیزات</h3>
+            <p>پنل، اینورتر، سازه، کابل و تجهیزات حفاظتی — اصل و با فاکتور رسمی.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 48 48" width="40" height="40"><path d="M8 36l8-8 6 6 12-14 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 12h6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>نصب و راه‌اندازی</h3>
+            <p>اجرای استاندارد روی سقف یا زمین، سیم‌کشی ایمن و تحویل با آموزش کاربری.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="24" r="14" fill="none" stroke="currentColor" stroke-width="2"/><path d="M24 16v8l5 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10 24h-4M42 24h-4M24 10V6M24 42v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>نگهداری و پشتیبانی</h3>
+            <p>بازدید دوره‌ای، عیب‌یابی، نظافت پنل و ارتقای ظرفیت در آینده.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+      <div class="container stats__grid">
+        <div class="stats__item reveal">
+          <strong data-count="350" data-suffix="+">۰</strong>
+          <span>پروژه تکمیل‌شده</span>
+        </div>
+        <div class="stats__item reveal">
+          <strong data-count="12" data-suffix="">۰</strong>
+          <span>سال تجربه</span>
+        </div>
+        <div class="stats__item reveal">
+          <strong data-count="28" data-suffix=" MW">۰</strong>
+          <span>ظرفیت نصب‌شده</span>
+        </div>
+        <div class="stats__item reveal">
+          <strong data-count="98" data-suffix="%">۰</strong>
+          <span>رضایت مشتریان</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">نمونه پروژه‌ها</span>
+          <h2 class="section-title">کارهایی که تا امروز تحویل داده‌ایم</h2>
+          <p class="section-text">از ویلای شخصی تا سوله صنعتی — هر پروژه داستان خودش را دارد</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-card__img">
+              <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=800&q=80" alt="پروژه ویلای لواسان" loading="lazy" />
+              <span class="project-card__tag">خانگی · ۸ kW</span>
+            </div>
+            <div class="project-card__body">
+              <h3>ویلای مسکونی — لواسان</h3>
+              <p>سیستم on-grid با کاهش حدود ۷۰٪ هزینه برق ماهانه</p>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-card__img">
+              <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80" alt="سوله صنعتی" loading="lazy" />
+              <span class="project-card__tag">صنعتی · ۴۵ kW</span>
+            </div>
+            <div class="project-card__body">
+              <h3>سوله تولید — شهرک صنعتی عباس‌آباد</h3>
+              <p>نصب روی سقف سوله با سازه مقاوم باد و برف</p>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-card__img">
+              <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=800&q=80" alt="مزرعه خورشیدی" loading="lazy" />
+              <span class="project-card__tag">زمین‌پایه · ۱۲۰ kW</span>
+            </div>
+            <div class="project-card__body">
+              <h3>مزرعه خورشیدی — قزوین</h3>
+              <p>طراحی زمین‌پایه با ردیابی عملکرد از راه دور</p>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-card__img">
+              <img src="https://images.unsplash.com/photo-1558449028-b53a0d4b0e1e?auto=format&fit=crop&w=800&q=80" alt="اداری تجاری" loading="lazy" />
+              <span class="project-card__tag">تجاری · ۲۲ kW</span>
+            </div>
+            <div class="project-card__body">
+              <h3>مجتمع اداری — تهرانپارس</h3>
+              <p>تأمین بخشی از مصرف مشاعات و پارکینگ</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full Calculator -->
+    <section class="section section--calc" id="calculator">
+      <div class="container">
+        <div class="calc-section reveal">
+          <div class="calc-section__info">
+            <span class="section-label section-label--light">ماشین‌حساب آنلاین</span>
+            <h2 class="section-title section-title--light">هزینه نصب را همین‌جا برآورد کنید</h2>
+            <p class="calc-section__lead">
+              با وارد کردن متراژ محل نصب و ظرفیت پنل مورد نیاز، مبلغ تقریبی تجهیزات،
+              سازه، اینورتر و <strong>دستمزد نصب</strong> را فوری می‌بینید.
+              نرخ‌ها از پیشخوان مدیریت به‌روز می‌شوند.
+            </p>
+            <ul class="calc-section__bullets">
+              <li>محاسبه شفاف و جزءبه‌جزء</li>
+              <li>مبتنی بر نرخ روز پروژه</li>
+              <li>قابل تبدیل به درخواست مشاوره</li>
+            </ul>
+            <div class="calc-section__hint">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <span>این برآورد تقریبی است؛ قیمت نهایی پس از بازدید فنی اعلام می‌شود.</span>
+            </div>
+          </div>
+
+          <div class="calc-card calc-card--main">
+            <form class="calc-form" data-calc="main" novalidate>
+              <div class="field">
+                <label for="main-area">متراژ زمین / سقف (متر مربع)</label>
+                <div class="field__input">
+                  <input type="number" id="main-area" name="area" min="10" max="5000" step="1" placeholder="مثلاً ۲۰۰" required />
+                  <span class="field__unit">m²</span>
+                </div>
+              </div>
+              <div class="field">
+                <label for="main-kw">میزان پنل درخواستی (کیلووات)</label>
+                <div class="field__input">
+                  <input type="number" id="main-kw" name="kw" min="1" max="100" step="0.5" placeholder="مثلاً ۱۰" required />
+                  <span class="field__unit">kW</span>
+                </div>
+              </div>
+              <button type="submit" class="btn btn--primary btn--block btn--lg">محاسبه مبلغ تمام‌شده</button>
+            </form>
+
+            <div class="calc-result calc-result--detailed" data-calc-result="main" hidden>
+              <h4>جزئیات برآورد</h4>
+              <div class="calc-result__row"><span>پنل‌ها</span><strong data-r="panels">—</strong></div>
+              <div class="calc-result__row"><span>سازه و نصب مکانیکی</span><strong data-r="structure">—</strong></div>
+              <div class="calc-result__row"><span>اینورتر و تجهیزات برقی</span><strong data-r="inverter">—</strong></div>
+              <div class="calc-result__row"><span>دستمزد نصب</span><strong data-r="labor">—</strong></div>
+              <div class="calc-result__row"><span>هزینه‌های جانبی</span><strong data-r="misc">—</strong></div>
+              <div class="calc-result__total">
+                <span>مبلغ نهایی تقریبی</span>
+                <strong data-r="total">—</strong>
+              </div>
+              <p class="calc-result__note" data-r="notes"></p>
+              <button type="button" class="btn btn--dark btn--block" data-fill-consult>
+                ثبت درخواست مشاوره با این مشخصات
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">مراحل همکاری</span>
+          <h2 class="section-title">از تماس اول تا تحویل کلید</h2>
+        </div>
+        <div class="process-grid">
+          <div class="process-step reveal">
+            <div class="process-step__num">۰۱</div>
+            <h3>مشاوره و بازدید</h3>
+            <p>بررسی محل، مصرف برق و امکان‌سنجی فنی رایگان</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="process-step__num">۰۲</div>
+            <h3>طراحی و پیشنهاد</h3>
+            <p>نقشه، لیست تجهیزات و پیش‌فاکتور شفاف</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="process-step__num">۰۳</div>
+            <h3>اجرا و نصب</h3>
+            <p>نصب استاندارد با تیم فنی و نظارت کیفیت</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="process-step__num">۰۴</div>
+            <h3>تحویل و پشتیبانی</h3>
+            <p>آموزش، گارانتی و پشتیبانی پس از فروش</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section--muted">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">نظر مشتریان</span>
+          <h2 class="section-title">آنچه کارفرمایان می‌گویند</h2>
+        </div>
+        <div class="testimonials">
+          <blockquote class="testimonial reveal">
+            <div class="testimonial__stars">★★★★★</div>
+            <p>«از طراحی تا نصب همه‌چیز منظم بود. بعد از سه ماه، کاهش قبض برق دقیقاً نزدیک به همان چیزی بود که در برآورد اولیه گفته بودند.»</p>
+            <footer>
+              <strong>مهندس رضایی</strong>
+              <span>کارفرمای پروژه ویلایی — کرج</span>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial reveal">
+            <div class="testimonial__stars">★★★★★</div>
+            <p>«برای سوله صنعتی‌مان دنبال پیمانکار مطمئن بودیم. تیم آفتاب نیرو هم زمان‌بندی را رعایت کرد هم مستندات فنی کاملی تحویل داد.»</p>
+            <footer>
+              <strong>خانم نادری</strong>
+              <span>مدیر کارخانه — عباس‌آباد</span>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial reveal">
+            <div class="testimonial__stars">★★★★★</div>
+            <p>«ماشین‌حساب سایت کمک کرد بودجه را از قبل بدانیم. بعد از بازدید، قیمت نهایی فقط کمی با برآورد آنلاین فرق داشت.»</p>
+            <footer>
+              <strong>آقای محمدی</strong>
+              <span>مالک ساختمان اداری — تهران</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA band -->
+    <section class="cta-band">
+      <div class="container cta-band__inner reveal">
+        <div>
+          <h2>آماده شروع پروژه خورشیدی‌تان هستید؟</h2>
+          <p>فرم مشاوره را پر کنید؛ کارشناس ما در کوتاه‌ترین زمان تماس می‌گیرد.</p>
+        </div>
+        <a href="#contact" class="btn btn--light btn--lg">درخواست مشاوره رایگان</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container contact__grid">
+        <div class="contact__info reveal">
+          <span class="section-label">تماس با ما</span>
+          <h2 class="section-title">درخواست مشاوره رایگان</h2>
+          <p class="section-text">
+            مشخصات تماس خود را وارد کنید. پیام شما از طریق سامانه پیامکی برای تیم پشتیبانی ارسال می‌شود
+            تا در اسرع وقت با شما هماهنگ کنیم.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-list__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <div>
+                <small>تلفن</small>
+                <strong id="contact-phone">۰۲۱-۹۱۰۰۰۰۰۰</strong>
+              </div>
+            </li>
+            <li>
+              <span class="contact-list__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <div>
+                <small>آدرس</small>
+                <strong id="contact-address">تهران، خیابان ولیعصر، برج نور، طبقه ۸</strong>
+              </div>
+            </li>
+            <li>
+              <span class="contact-list__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </span>
+              <div>
+                <small>ساعات کاری</small>
+                <strong id="contact-hours">شنبه تا پنج‌شنبه ۹ تا ۱۸</strong>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form reveal" id="consult-form" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="c-name">نام و نام خانوادگی *</label>
+              <input type="text" id="c-name" name="name" placeholder="مثلاً علی رضایی" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="c-mobile">شماره موبایل *</label>
+              <input type="tel" id="c-mobile" name="mobile" placeholder="0912xxxxxxx" required autocomplete="tel" dir="ltr" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="c-city">شهر</label>
+              <input type="text" id="c-city" name="city" placeholder="تهران" />
+            </div>
+            <div class="field">
+              <label for="c-area">متراژ تقریبی (m²)</label>
+              <input type="number" id="c-area" name="area" placeholder="اختیاری" min="0" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="c-kw">ظرفیت مورد نظر (kW)</label>
+            <input type="number" id="c-kw" name="kw" placeholder="اختیاری" min="0" step="0.5" />
+          </div>
+          <div class="field">
+            <label for="c-message">توضیحات</label>
+            <textarea id="c-message" name="message" rows="4" placeholder="زمان مناسب تماس، نوع ملک، سوالات..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block btn--lg" id="consult-submit">
+            ارسال درخواست مشاوره
+          </button>
+          <p class="form-status" id="consult-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#" class="logo logo--light">
+          <span class="logo__icon">
+            <svg viewBox="0 0 40 40" width="36" height="36"><circle cx="20" cy="20" r="18" fill="#C8102E"/><circle cx="20" cy="16" r="7" fill="#FFF3E0"/><path d="M12 28c2-4 6-6 8-6s6 2 8 6" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+          </span>
+          <span class="logo__text">
+            <strong>آفتاب نیرو</strong>
+            <small>نصب پنل خورشیدی</small>
+          </span>
+        </a>
+        <p>طراحی، تأمین و نصب سیستم‌های خورشیدی خانگی، تجاری و صنعتی با تمرکز روی کیفیت اجرا و شفافیت قیمت.</p>
+      </div>
+      <div>
+        <h4>دسترسی سریع</h4>
+        <ul class="footer__links">
+          <li><a href="#about">درباره ما</a></li>
+          <li><a href="#services">خدمات</a></li>
+          <li><a href="#projects">پروژه‌ها</a></li>
+          <li><a href="#calculator">ماشین‌حساب</a></li>
+          <li><a href="#contact">تماس</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>خدمات</h4>
+        <ul class="footer__links">
+          <li><a href="#services">طراحی مهندسی</a></li>
+          <li><a href="#services">تأمین تجهیزات</a></li>
+          <li><a href="#services">نصب و راه‌اندازی</a></li>
+          <li><a href="#services">پشتیبانی</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ارتباط</h4>
+        <ul class="footer__links footer__contact">
+          <li id="footer-phone">۰۲۱-۹۱۰۰۰۰۰۰</li>
+          <li id="footer-email">info@aftabniro.ir</li>
+          <li id="footer-address">تهران، خیابان ولیعصر</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© <span id="year"></span> آفتاب نیرو. تمامی حقوق محفوظ است.</p>
+        <a href="/admin" class="footer__admin">پیشخوان مدیریت</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal mini calculator (from header) -->
+  <div class="modal" id="calc-modal" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog calc-card" role="dialog" aria-modal="true" aria-labelledby="modal-calc-title">
+      <button type="button" class="modal__close" data-close-modal aria-label="بستن">×</button>
+      <div class="calc-card__head">
+        <h3 id="modal-calc-title">برآورد سریع هزینه</h3>
+        <p>متراژ و ظرفیت پنل را وارد کنید</p>
+      </div>
+      <form class="calc-form" data-calc="modal" novalidate>
+        <div class="field">
+          <label for="modal-area">متراژ زمین / سقف (متر مربع)</label>
+          <div class="field__input">
+            <input type="number" id="modal-area" name="area" min="10" max="5000" step="1" placeholder="مثلاً ۱۲۰" required />
+            <span class="field__unit">m²</span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="modal-kw">میزان پنل درخواستی (کیلووات)</label>
+          <div class="field__input">
+            <input type="number" id="modal-kw" name="kw" min="1" max="100" step="0.5" placeholder="مثلاً ۵" required />
+            <span class="field__unit">kW</span>
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primary btn--block">محاسبه مبلغ</button>
+      </form>
+      <div class="calc-result" data-calc-result="modal" hidden>
+        <div class="calc-result__row"><span>هزینه تجهیزات و نصب</span><strong data-r="subtotal">—</strong></div>
+        <div class="calc-result__row"><span>دستمزد نصب</span><strong data-r="labor">—</strong></div>
+        <div class="calc-result__total"><span>مبلغ نهایی تقریبی</span><strong data-r="total">—</strong></div>
+        <p class="calc-result__note" data-r="notes"></p>
+        <a href="#contact" class="btn btn--dark btn--block btn--sm" data-close-modal data-fill-consult>درخواست مشاوره</a>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="back-top" id="back-top" aria-label="بازگشت به بالا">↑</button>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

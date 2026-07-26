@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>پیشخوان مدیریت | آفتاب نیرو</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/admin.css" />
+</head>
+<body>
+  <!-- Login -->
+  <div id="login-view" class="login-view">
+    <form class="login-card" id="login-form" novalidate>
+      <div class="login-card__brand">
+        <div class="login-card__logo">☀️</div>
+        <h1>پیشخوان آفتاب نیرو</h1>
+        <p>مدیریت نرخ‌ها، پیامک و درخواست‌ها</p>
+      </div>
+      <div class="field">
+        <label for="username">نام کاربری</label>
+        <input type="text" id="username" name="username" autocomplete="username" value="admin" required />
+      </div>
+      <div class="field">
+        <label for="password">رمز عبور</label>
+        <input type="password" id="password" name="password" autocomplete="current-password" required />
+      </div>
+      <button type="submit" class="btn btn-primary" id="login-btn">ورود</button>
+      <p class="status" id="login-status"></p>
+      <a href="/" class="back-link">← بازگشت به سایت</a>
+    </form>
+  </div>
+
+  <!-- Dashboard -->
+  <div id="dash-view" class="dash" hidden>
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+        <strong>آفتاب نیرو</strong>
+        <small>پیشخوان مدیریت</small>
+      </div>
+      <nav class="sidebar__nav">
+        <button type="button" class="nav-item is-active" data-tab="calculator">ماشین‌حساب</button>
+        <button type="button" class="nav-item" data-tab="sms">پیامک SMS.IR</button>
+        <button type="button" class="nav-item" data-tab="site">اطلاعات سایت</button>
+        <button type="button" class="nav-item" data-tab="leads">درخواست‌ها</button>
+        <button type="button" class="nav-item" data-tab="account">حساب کاربری</button>
+      </nav>
+      <div class="sidebar__foot">
+        <a href="/" target="_blank" class="nav-item">مشاهده سایت ↗</a>
+        <button type="button" class="nav-item nav-item--danger" id="logout-btn">خروج</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="main__head">
+        <div>
+          <h2 id="page-title">ماشین‌حساب</h2>
+          <p id="page-sub">نرخ‌ها و فرمول برآورد هزینه آنلاین</p>
+        </div>
+        <div class="main__actions">
+          <span class="pill" id="save-pill" hidden>ذخیره شد</span>
+        </div>
+      </header>
+
+      <!-- Calculator rates -->
+      <section class="panel is-active" data-panel="calculator">
+        <form id="calc-form" class="card form-grid">
+          <div class="card__head">
+            <h3>نرخ‌های محاسبه</h3>
+            <p>این اعداد مستقیماً روی ماشین‌حساب هدر و بخش میانی سایت اثر می‌گذارند.</p>
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label for="pricePerKw">قیمت هر کیلووات پنل (تومان)</label>
+              <input type="number" id="pricePerKw" name="pricePerKw" min="0" step="1000" />
+            </div>
+            <div class="field">
+              <label for="structurePerM2">هزینه سازه به ازای هر متر مربع</label>
+              <input type="number" id="structurePerM2" name="structurePerM2" min="0" step="1000" />
+            </div>
+            <div class="field">
+              <label for="laborPerKw">دستمزد نصب به ازای هر کیلووات</label>
+              <input type="number" id="laborPerKw" name="laborPerKw" min="0" step="1000" />
+            </div>
+            <div class="field">
+              <label for="inverterBase">هزینه پایه اینورتر</label>
+              <input type="number" id="inverterBase" name="inverterBase" min="0" step="1000" />
+            </div>
+            <div class="field">
+              <label for="inverterPerKw">هزینه اینورتر به ازای هر کیلووات</label>
+              <input type="number" id="inverterPerKw" name="inverterPerKw" min="0" step="1000" />
+            </div>
+            <div class="field">
+              <label for="miscPercent">درصد هزینه‌های جانبی</label>
+              <input type="number" id="miscPercent" name="miscPercent" min="0" max="50" step="0.5" />
+            </div>
+            <div class="field">
+              <label for="minArea">حداقل متراژ</label>
+              <input type="number" id="minArea" name="minArea" min="1" />
+            </div>
+            <div class="field">
+              <label for="maxArea">حداکثر متراژ</label>
+              <input type="number" id="maxArea" name="maxArea" min="1" />
+            </div>
+            <div class="field">
+              <label for="minKw">حداقل ظرفیت (kW)</label>
+              <input type="number" id="minKw" name="minKw" min="0.5" step="0.5" />
+            </div>
+            <div class="field">
+              <label for="maxKw">حداکثر ظرفیت (kW)</label>
+              <input type="number" id="maxKw" name="maxKw" min="1" step="0.5" />
+            </div>
+            <div class="field">
+              <label for="currencyLabel">واحد پول</label>
+              <input type="text" id="currencyLabel" name="currencyLabel" />
+            </div>
+            <div class="field field--full">
+              <label for="notes">متن راهنما زیر نتیجه محاسبه</label>
+              <textarea id="notes" name="notes" rows="2"></textarea>
+            </div>
+          </div>
+          <div class="formula-box">
+            <strong>فرمول محاسبه:</strong>
+            <code>
+              (kW × قیمت پنل) + (متراژ × سازه) + (kW × دستمزد) + (پایه اینورتر + kW × اینورتر)
+              + درصد جانبی
+            </code>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">ذخیره نرخ‌ها</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- SMS -->
+      <section class="panel" data-panel="sms">
+        <form id="sms-form" class="card form-grid">
+          <div class="card__head">
+            <h3>تنظیمات SMS.IR</h3>
+            <p>با ثبت درخواست مشاوره، یک پیامک حاوی اطلاعات مشتری به موبایل مدیر ارسال می‌شود.</p>
+          </div>
+          <div class="grid-2">
+            <div class="field field--full">
+              <label for="apiKey">API Key</label>
+              <input type="password" id="apiKey" name="apiKey" placeholder="کلید API از پنل sms.ir" autocomplete="off" />
+              <small class="hint" id="apiKey-hint"></small>
+            </div>
+            <div class="field">
+              <label for="lineNumber">شماره خط ارسال‌کننده</label>
+              <input type="text" id="lineNumber" name="lineNumber" placeholder="مثلاً 3000xxxx" dir="ltr" />
+            </div>
+            <div class="field">
+              <label for="adminMobile">موبایل مدیر (گیرنده پیامک)</label>
+              <input type="tel" id="adminMobile" name="adminMobile" placeholder="0912xxxxxxx" dir="ltr" />
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">ذخیره تنظیمات پیامک</button>
+            <button type="button" class="btn btn-ghost" id="test-sms-btn">ارسال پیامک تست</button>
+          </div>
+          <p class="status" id="sms-status"></p>
+        </form>
+      </section>
+
+      <!-- Site info -->
+      <section class="panel" data-panel="site">
+        <form id="site-form" class="card form-grid">
+          <div class="card__head">
+            <h3>اطلاعات تماس سایت</h3>
+            <p>در هدر، فوتر و بخش تماس نمایش داده می‌شود.</p>
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label for="site-name">نام برند</label>
+              <input type="text" id="site-name" name="name" />
+            </div>
+            <div class="field">
+              <label for="site-tagline">شعار</label>
+              <input type="text" id="site-tagline" name="tagline" />
+            </div>
+            <div class="field">
+              <label for="site-phone">تلفن</label>
+              <input type="text" id="site-phone" name="phone" dir="ltr" />
+            </div>
+            <div class="field">
+              <label for="site-mobile">موبایل</label>
+              <input type="text" id="site-mobile" name="mobile" dir="ltr" />
+            </div>
+            <div class="field">
+              <label for="site-email">ایمیل</label>
+              <input type="email" id="site-email" name="email" dir="ltr" />
+            </div>
+            <div class="field">
+              <label for="site-hours">ساعات کاری</label>
+              <input type="text" id="site-hours" name="workingHours" />
+            </div>
+            <div class="field field--full">
+              <label for="site-address">آدرس</label>
+              <input type="text" id="site-address" name="address" />
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">ذخیره اطلاعات</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Leads -->
+      <section class="panel" data-panel="leads">
+        <div class="card">
+          <div class="card__head card__head--row">
+            <div>
+              <h3>درخواست‌های مشاوره</h3>
+              <p>لیست فرم‌های ارسال‌شده از سایت</p>
+            </div>
+            <button type="button" class="btn btn-ghost btn-sm" id="refresh-leads">بروزرسانی</button>
+          </div>
+          <div class="table-wrap">
+            <table class="table" id="leads-table">
+              <thead>
+                <tr>
+                  <th>تاریخ</th>
+                  <th>نام</th>
+                  <th>موبایل</th>
+                  <th>شهر</th>
+                  <th>متراژ / kW</th>
+                  <th>پیامک</th>
+                  <th>پیام</th>
+                </tr>
+              </thead>
+              <tbody id="leads-body">
+                <tr><td colspan="7" class="empty">در حال بارگذاری...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Account -->
+      <section class="panel" data-panel="account">
+        <form id="account-form" class="card form-grid">
+          <div class="card__head">
+            <h3>حساب کاربری پیشخوان</h3>
+            <p>برای امنیت، بعد از اولین ورود رمز پیش‌فرض را عوض کنید.</p>
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label for="admin-username">نام کاربری</label>
+              <input type="text" id="admin-username" name="username" autocomplete="username" />
+            </div>
+            <div class="field">
+              <label for="admin-password">رمز عبور جدید</label>
+              <input type="password" id="admin-password" name="password" placeholder="خالی = بدون تغییر" autocomplete="new-password" />
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">ذخیره حساب</button>
+          </div>
+          <p class="status" id="account-status"></p>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>

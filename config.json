@@ -1,0 +1,34 @@
+{
+  "site": {
+    "name": "آفتاب نیرو",
+    "tagline": "نصب تخصصی پنل خورشیدی",
+    "phone": "09363685411",
+    "mobile": "09363685411",
+    "email": "info@aftabniro.ir",
+    "address": "بهارستان، خیابان حکیم",
+    "workingHours": "شنبه تا پنج‌شنبه ۹ تا ۱۸"
+  },
+  "admin": {
+    "username": "admin",
+    "password": "admin1234"
+  },
+  "sms": {
+    "apiKey": "",
+    "lineNumber": "",
+    "adminMobile": ""
+  },
+  "calculator": {
+    "pricePerKw": 18500000.0,
+    "structurePerM2": 420000,
+    "laborPerKw": 2800000.0,
+    "inverterBase": 12000000,
+    "inverterPerKw": 1800000,
+    "miscPercent": 5,
+    "minKw": 1,
+    "maxKw": 100,
+    "minArea": 10,
+    "maxArea": 5000,
+    "currencyLabel": "تومان",
+    "notes": "قیمت‌ها تقریبی است و پس از بازدید حضوری نهایی می‌شود."
+  }
+}

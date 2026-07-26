@@ -1,0 +1,16 @@
+Backup created: 2026-07-25 22:47:35 UTC
+Source: /root/solar-landing
+Files: 10
+Bytes (uncompressed sources): 124550
+
+Included files:
+solar-landing/README.md
+solar-landing/data/config.json
+solar-landing/data/leads.json
+solar-landing/public/admin.html
+solar-landing/public/css/admin.css
+solar-landing/public/css/style.css
+solar-landing/public/index.html
+solar-landing/public/js/admin.js
+solar-landing/public/js/main.js
+solar-landing/server.py
